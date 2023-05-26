@@ -31,13 +31,16 @@ function shuffleWord(parameter) {
 
   // looping and branching
 
-  var l1 = arrayPicker(word);
-  word = word.replace(l1, "");
-  var l2 = arrayPicker(word);
-  word = word.replace(l2, "");
-  var l3 = arrayPicker(word);
-  word = word.replace(l3, "");
-  var new_word = l1 + l2 + l3 + word;
+  let i = 0;
+  var new_word = "";
+
+  while (i < parameter.length) {
+    var l1 = arrayPicker(word);
+    new_word += l1;
+    word = word.replace(l1, "");
+
+    i++;
+  }
 
   return new_word;
 }
