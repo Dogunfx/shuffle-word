@@ -18,6 +18,7 @@ var generateWord = function () {
     "stand",
     "play",
     "Coding",
+    "HIPPOPOTEMUS",
     "Michael",
   ];
   var word = arrayPicker(words);
@@ -26,22 +27,16 @@ var generateWord = function () {
 
 function shuffleWord(parameter) {
   var word = parameter;
-
   // control structure
-
   // looping and branching
-
   let i = 0;
   var new_word = "";
-
   while (i < parameter.length) {
     var l1 = arrayPicker(word);
     new_word += l1;
     word = word.replace(l1, "");
-
     i++;
   }
-
   return new_word;
 }
 
